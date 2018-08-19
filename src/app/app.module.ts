@@ -4,15 +4,50 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FormsModule } from '@angular/forms';
+import { LoginPageComponent } from './componentes/login-page/login-page.component';
+import { LoggedPageComponent } from './componentes/logged-page/logged-page.component';
+import { RegisterPageComponent } from './componentes/register-page/register-page.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
+import {HomePageComponent} from './componentes/home-page/home-page.component';
+
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
+
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+
+import {environment} from '../environments/environment';
+
+import { AuthService } from './servicios/auth.service';
+
+import {AuthGuard} from './guards/auth.guard';
+import { GameModeComponent } from './componentes/game-mode/game-mode.component';
+import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoggedPageComponent,
+    NavbarComponent,
+    RegisterPageComponent,
+    LoginPageComponent,
+    HomePageComponent,
+    GameModeComponent,
+    DifficultyComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
   ],
-  providers: [],
+  providers: [AuthService,FlashMessagesService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
