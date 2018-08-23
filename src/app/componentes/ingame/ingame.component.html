@@ -2,11 +2,11 @@
   <table class="tablero">
       <tr *ngFor="let fila of matriz; let i = index">
               <td *ngFor="let casilla of fila; let j = index">
-                <div [style.background]="(i+j)%2 == 0 ? '#333745' : '#EEF5DB'" class="d-flex justify-content-center">
+                <div [style.background]="(i+j)%2 == 0 ? j1_color : j2_color" class="d-flex justify-content-center">
                   
-                  <a *ngIf="casilla == 0" href="/move/{{ i }}/{{ j }}/" class="color{{ casilla }}{{ jugador }} w-100"></a>
+                  <a *ngIf="casilla == 0"  href="/move/{{ i }}/{{ j }}/" class="color{{ casilla }}{{ jugador }} w-100"></a>
 
-                  <a *ngIf="casilla != 0" href="/move/{{ i }}/{{ j }}/" class="color{{ casilla }} w-100"></a>
+                  <a *ngIf="casilla != 0" href="/move/{{ i }}/{{ j }}/" [style.background]="casilla == 1 ? j1_color : j2_color" class="color{{ casilla }} w-100"></a>
                 
                 </div>
               </td>

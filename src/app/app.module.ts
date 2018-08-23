@@ -10,6 +10,7 @@ import { LoggedPageComponent } from './componentes/logged-page/logged-page.compo
 import { RegisterPageComponent } from './componentes/register-page/register-page.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import {HomePageComponent} from './componentes/home-page/home-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
@@ -47,7 +48,8 @@ import { IngameComponent } from './componentes/ingame/ingame.component';
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FlashMessagesModule
+    FlashMessagesModule,
+    HttpClientModule
   ],
   providers: [AuthService,FlashMessagesService,AuthGuard],
   bootstrap: [AppComponent]
