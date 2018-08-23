@@ -1,0 +1,80 @@
+.jugadorActual h2 {
+    margin-bottom: 2%;
+}
+
+.jugadorActual a {
+  margin-top: 5%;
+  padding:0.5% 1.5%;
+}
+
+
+.tablero{
+    width:500px;
+    height:500px;
+    margin-left: 15%;
+    margin-top: 3%;
+    text-align:center;
+}
+.tablero td {
+    width:50px;
+    height:50px;
+    text-align:center;
+    padding:0;
+    margin: 0;
+    border: solid black;
+}
+
+.tablero div {
+    width:100%;
+    height:100%;
+}
+
+.tablero a {
+    margin:10%;
+}
+
+a.color1 {
+    background: #08090a;
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #7d8c8e;
+}
+
+a.color01:hover{
+    background: #08090a;
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #7d8c8e;
+}
+
+a.color01:active{
+    background: #299ea7;
+
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #004edc;
+}
+
+a.color2 {
+    background: #cdd3da;
+
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #7d8c8e;
+}
+
+a.color02:hover{
+    background: #cdd3da;
+
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #7d8c8e;
+}
+
+a.color02:active{
+    background: #299ea7;
+
+    border:outset 3px;
+    border-radius: 50%;
+    border-color: #004edc;
+}
