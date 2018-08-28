@@ -10,7 +10,6 @@ import { LoggedPageComponent } from './componentes/logged-page/logged-page.compo
 import { RegisterPageComponent } from './componentes/register-page/register-page.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import {HomePageComponent} from './componentes/home-page/home-page.component';
-import { HttpClientModule } from '@angular/common/http';
 
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
@@ -26,9 +25,9 @@ import { AuthService } from './servicios/auth.service';
 import {AuthGuard} from './guards/auth.guard';
 import { GameModeComponent } from './componentes/game-mode/game-mode.component';
 import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
-import { IngameComponent } from './componentes/ingame/ingame.component';
-import { IngameService } from './servicios/ingame.service';
 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { PruebitaComponent } from './componentes/pruebita/pruebita.component';
 
 
 @NgModule({
@@ -41,7 +40,7 @@ import { IngameService } from './servicios/ingame.service';
     HomePageComponent,
     GameModeComponent,
     DifficultyComponent,
-    IngameComponent,
+    PruebitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,9 +49,9 @@ import { IngameService } from './servicios/ingame.service';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     FlashMessagesModule,
-    HttpClientModule
+    AngularFireDatabaseModule
   ],
-  providers: [AuthService,FlashMessagesService,AuthGuard, IngameService],
+  providers: [AuthService,FlashMessagesService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

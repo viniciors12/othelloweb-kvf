@@ -7,7 +7,7 @@ import {HomePageComponent} from './componentes/home-page/home-page.component';
 import { GameModeComponent } from './componentes/game-mode/game-mode.component';
 import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
 import {AuthGuard} from './guards/auth.guard';
-import { IngameComponent } from './componentes/ingame/ingame.component';
+import { PruebitaComponent } from './componentes/pruebita/pruebita.component';
 
 const routes: Routes = [
   {path: 'login',component: LoginPageComponent},
@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: '',component: HomePageComponent},
   {path: 'game-mode',component: GameModeComponent,canActivate: [AuthGuard]},
   {path: 'difficulty',component: DifficultyComponent,canActivate: [AuthGuard]},
-  {path: 'ingame',component: IngameComponent,canActivate: [AuthGuard]}
+  {path: 'pruebita',component: PruebitaComponent}
 ];
 
 @NgModule({
