@@ -4,7 +4,8 @@ import { IngameService } from '../../servicios/ingame.service';
 @Component({
   selector: 'ingame',
   templateUrl: './ingame.component.html',
-  styleUrls: ['./ingame.component.scss']
+  styleUrls: ['./ingame.component.scss'],
+  providers: [IngameService]
 })
 
 export class IngameComponent implements OnInit {

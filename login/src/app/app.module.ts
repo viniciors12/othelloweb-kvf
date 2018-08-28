@@ -25,6 +25,7 @@ import { AuthService } from './servicios/auth.service';
 import {AuthGuard} from './guards/auth.guard';
 import { GameModeComponent } from './componentes/game-mode/game-mode.component';
 import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
+import { IngameComponent } from './componentes/ingame/ingame.component';
 
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { PruebitaComponent } from './componentes/pruebita/pruebita.component';
@@ -41,6 +42,7 @@ import { PruebitaComponent } from './componentes/pruebita/pruebita.component';
     GameModeComponent,
     DifficultyComponent,
     PruebitaComponent,
+    IngameComponent
   ],
   imports: [
     BrowserModule,
