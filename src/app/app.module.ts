@@ -26,6 +26,8 @@ import {AuthGuard} from './guards/auth.guard';
 import { GameModeComponent } from './componentes/game-mode/game-mode.component';
 import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
 
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { PruebitaComponent } from './componentes/pruebita/pruebita.component';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { DifficultyComponent } from './componentes/difficulty/difficulty.compone
     HomePageComponent,
     GameModeComponent,
     DifficultyComponent,
+    PruebitaComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { DifficultyComponent } from './componentes/difficulty/difficulty.compone
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FlashMessagesModule
+    FlashMessagesModule,
+    AngularFireDatabaseModule
   ],
   providers: [AuthService,FlashMessagesService,AuthGuard],
   bootstrap: [AppComponent]
