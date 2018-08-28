@@ -1,0 +1,25 @@
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h3 class="card-title text-center">Juega a Othello</h3>
+              <h6 class="card-title2 text-center">Modo de juego</h6>
+              <div (submit)="onSubmitLogin()" class="div-signin">
+                
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Reanudar</button>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" routerLink="/difficulty" type="submit">J1 vs BOT</button>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" routerLink="/ingame">J1 vs J2</button>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">BOT vs BOT</button>
+                <hr class="my-4">
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" routerLink="/logged" type="submit">Atrás</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
