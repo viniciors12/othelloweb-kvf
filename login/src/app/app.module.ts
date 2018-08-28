@@ -27,6 +27,7 @@ import {AuthGuard} from './guards/auth.guard';
 import { GameModeComponent } from './componentes/game-mode/game-mode.component';
 import { DifficultyComponent } from './componentes/difficulty/difficulty.component';
 import { IngameComponent } from './componentes/ingame/ingame.component';
+import { IngameService } from './servicios/ingame.service';
 
 
 
@@ -51,7 +52,7 @@ import { IngameComponent } from './componentes/ingame/ingame.component';
     FlashMessagesModule,
     HttpClientModule
   ],
-  providers: [AuthService,FlashMessagesService,AuthGuard],
+  providers: [AuthService,FlashMessagesService,AuthGuard, IngameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

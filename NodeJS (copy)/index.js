@@ -1,7 +1,13 @@
 var express = require('express');
 var app = express();
 const Juego = require("./gamelogic/Juego.js");
+var cors = require("cors");
+var bodyParser = require("body-parser");
 let instanciaJuego;
+
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(cors());
+app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
 	/*let juego = new Juego(6);
@@ -53,7 +59,7 @@ app.get('/test', function(req, res){
 		res.send("Juego 1vsCPU medio");
 	}else{
 		console.log("Juego 1vsCPU difícil");
-		res.send("Juego 1vsCPU difícil");
+		res.json({mensaje:"Juego 1vsCPU dificil"});
 	}
 
 });

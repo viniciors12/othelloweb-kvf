@@ -4,9 +4,9 @@ import { IngameService } from '../../servicios/ingame.service';
 @Component({
   selector: 'ingame',
   templateUrl: './ingame.component.html',
-  styleUrls: ['./ingame.component.scss'],
-  providers: [IngameService]
+  styleUrls: ['./ingame.component.scss']
 })
+
 export class IngameComponent implements OnInit {
   public juego : {};
   public matriz: number[][];
